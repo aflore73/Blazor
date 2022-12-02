@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj": {}
+    "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj": {
+    "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj",
+        "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj",
         "projectName": "BlazorExpenseTracker.API",
-        "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj",
+        "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\BlazorExpenseTracker.API.csproj",
         "packagesPath": "C:\\Users\\aflorentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\obj\\",
+        "outputPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\aflorentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -31,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj": {
-                "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj"
+              "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj": {
+                "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj"
               },
-              "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
-                "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj"
+              "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
+                "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj"
               }
             }
           }
@@ -55,8 +52,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,22 +64,19 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj": {
+    "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
+        "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
         "projectName": "BlazorExpenseTracker.Data",
-        "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
+        "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
         "packagesPath": "C:\\Users\\aflorentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\obj\\",
+        "outputPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\aflorentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -99,8 +92,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
-                "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj"
+              "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
+                "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj"
               }
             }
           }
@@ -130,8 +123,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -140,22 +132,19 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
+    "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
+        "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
         "projectName": "BlazorExpenseTracker.Model",
-        "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
+        "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
         "packagesPath": "C:\\Users\\aflorentin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\obj\\",
+        "outputPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\aflorentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -194,8 +183,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -204,7 +192,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -12,6 +12,13 @@
 }
 else
 {
+    <table class="table"> 
+        <tbody>
+            <tr>
+                <td colspan="2"><a href="/categoriesdetails">Add New</a></td>
+            </tr>
+        </tbody>
+    </table>
     <table>
         <thead>
             <tr>
@@ -35,7 +42,7 @@ else
         [Parameter]
         public int id { get; set; }
 
-    public IEnumerable<Category> listcategories { get; set;}
+    public IEnumerable<Model.Categories> listcategories { get; set;}
     public string Message { get; set; }
     protected override async Task OnInitializedAsync()
     {

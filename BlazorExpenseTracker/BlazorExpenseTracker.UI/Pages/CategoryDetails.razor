@@ -3,42 +3,60 @@
 @using Model
 @using Interfaces
 @inject ICategoryService CategoryService
+@inject NavigationManager NavigationManager
+@*role es solo para brindar mator información del tipo al servidor o browser*@
+<div class="modal" tabindex="-1" style="display:block" role="dialog" aria-labelledby="dialogtitle">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dialogtitle">Category Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @*Model bindea al form con el modelo de Datos Category.
+                Lo que se cargue en el form se modifica en el Modelo y lo que hay en el modelo se refleja aquí
+                *@
+                <EditForm Model="@category" OnValidSubmit="SavedCategory">
+                    @*DataAnnotationsValidator debe estar para que Blazor sepa que tenemos un decorador del lado del modelo,
+                        entonces cuando se presiones submit se accionarán los decoradores.
+                    ValidationSummary: Imprime un mensaje que envíe el  Modelo de datos establecido en el decorador [Required]
+                    *@
+                    <DataAnnotationsValidator/>
+                    @*<ValidationSummary/>*@
+                    <table class="table-hover">
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" @bind="category.Name "/></td>
+                        </tr>
+                        <tr>
+                            @*otra forma de bindear mensajes es con ValidationMessage.
+                            La propiedad "For" bindea a la property del modelo con el mensaje*@
+                            <td colspan="2"><ValidationMessage For="@(() => category.Name)"></ValidationMessage>
 
-<h1>CategoryDetails</h1>
-@*Model bindea al form con el modelo de Datos Category.
-Lo que se cargue en el form se modifica en el Modelo y lo que hay en el modelo se refleja aquí
-*@
-<EditForm Model="@category" OnValidSubmit="SavedCategory">
-    @*DataAnnotationsValidator debe estar para que Blazor sepa que tenemos un decorador del lado del modelo,
-        entonces cuando se presiones submit se accionarán los decoradores.
-    ValidationSummary: Imprime un mensaje que envíe el  Modelo de datos establecido en el decorador [Required]
-    *@
-    <DataAnnotationsValidator/>
-    @*<ValidationSummary/>*@
-    <table class="table-hover">
-        <tr>
-            <td>Name</td>
-            <td><input type="text" @bind="category.Name "/></td>
-        </tr>
-        <tr>
-            @*otra forma de bindear mensajes es con ValidationMessage.
-            La propiedad "For" bindea a la property del modelo con el mensaje*@
-            <td colspan="2"><ValidationMessage For="@(() => category.Name)"></ValidationMessage>
-
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align:center">
-                <input type="submit" value="Save" />
-                <input type="button" value="Cancel" />
-            </td>
-        </tr>
-    </table>
-</EditForm>
+                            </td>
+                        </tr>
+                        <tr>
+                            @*In your code, if you want to submit the form to your server, you should use "Submit". 
+                            However, if you want to do something from client side by clicking the "Button", the input type "Button" is the choice.*@                
+                            <td colspan="2" style="text-align:center">
+                                <input type="submit" value="Save" />
+                                <input type="button" value="Cancel" />
+                                <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close" hidden="hidden"/>
+                            </td>
+                        </tr>
+                    </table>
+                </EditForm>
+            
+            </div>
+        </div>
+    </div>      
+</div>
 @code {
     [Parameter]
     public int id{ get; set; }
-    Category category = new Category();
+        Model.Categories category = new Model.Categories();
     public string Message { get; set; }
     protected override async Task OnInitializedAsync()
     {
@@ -59,5 +77,14 @@ Lo que se cargue en el form se modifica en el Modelo y lo que hay en el modelo s
         //category se encuenta bindeada con el Form Two Way <->
         //Model="@category"
         await CategoryService.SaveCategory(category);
+    }
+     protected void Cancel()
+    {
+        NavigateToCategories();
+    }
+
+    protected void NavigateToCategories()
+    {
+        NavigationManager.NavigateTo("/categories");
     }
 }

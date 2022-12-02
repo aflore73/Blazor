@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BlazorExpenseTracker.Model
 {
-    public class Category
+    public class Categories
     {
         public int Id { get; set; }
 

@@ -5,61 +5,60 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorExpenseTracker.UI
 build_property.RootNamespace = BlazorExpenseTracker.UI
-build_property.ProjectDir = C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.UI\
+build_property.ProjectDir = C:\Users\aflorentin\source\repos\Blazor\BlazorExpenseTracker\BlazorExpenseTracker.UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.UI
+build_property.MSBuildProjectDirectory = C:\Users\aflorentin\source\repos\Blazor\BlazorExpenseTracker\BlazorExpenseTracker.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/App.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Categories.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Categories.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/CategoryDetails.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/CategoryDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Index.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Syntax.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Syntax.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ludGF4LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Shared/SurveyPrompt.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/_Imports.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Shared/MainLayout.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-hgd7dhiakb
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Shared/NavMenu.razor]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rhtp4493x8
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Error.cshtml]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/_Host.cshtml]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aflorentin/source/repos/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/_Layout.cshtml]
+[C:/Users/aflorentin/source/repos/Blazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

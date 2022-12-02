@@ -8,14 +8,10 @@
           "System.Reflection.Emit.Lightweight": "4.7.0"
         },
         "compile": {
-          "lib/netstandard2.0/Dapper.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/Dapper.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Dapper.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/Dapper.dll": {}
         }
       },
       "Microsoft.Win32.Registry/4.7.0": {
@@ -27,14 +23,10 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
@@ -85,27 +77,19 @@
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.ComponentModel.Annotations/5.0.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Data.SqlClient/4.8.5": {
@@ -120,14 +104,10 @@
           "runtime.native.System.Data.SqlClient.sni": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/System.Data.SqlClient.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Data.SqlClient.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Data.SqlClient.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Data.SqlClient.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
@@ -146,14 +126,10 @@
           "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard1.3/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
       "System.Memory/4.5.4": {
@@ -164,27 +140,19 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
         }
       },
       "System.Reflection.Emit.Lightweight/4.7.0": {
@@ -199,14 +167,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Security.AccessControl/4.7.0": {
@@ -215,14 +179,10 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll": {
@@ -234,14 +194,10 @@
       "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll": {
@@ -256,14 +212,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.7.0"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
@@ -948,21 +900,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aflorentin\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\aflorentin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
+      "projectUniqueName": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
       "projectName": "BlazorExpenseTracker.Data",
-      "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
+      "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\BlazorExpenseTracker.Data.csproj",
       "packagesPath": "C:\\Users\\aflorentin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\obj\\",
+      "outputPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\aflorentin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -978,8 +926,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
-              "projectPath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj"
+            "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj": {
+              "projectPath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj"
             }
           }
         }
@@ -1009,8 +957,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1019,7 +966,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

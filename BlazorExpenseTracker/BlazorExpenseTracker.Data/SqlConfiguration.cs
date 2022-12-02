@@ -32,8 +32,16 @@ namespace BlazorExpenseTracker.Data
 
         public async Task<bool>Execute(string query, object parameters = null)
         {
-            var sqlconnection = dbConnection();
-            var count = await sqlconnection.ExecuteScalarAsync<int>(query, parameters, commandType: System.Data.CommandType.Text);
+            int count = 0;
+            try
+            {
+                var sqlconnection = dbConnection();
+                count = await sqlconnection.ExecuteScalarAsync<int>(query, parameters, commandType: System.Data.CommandType.Text);
+            }
+            catch (SqlException ex)
+            {
+                
+            }
            
             return count > 0;
         }

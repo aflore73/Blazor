@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LbuxaQaKhaZSoXN+6sTcVdBw7G3xMekSkviODAuNApQesncqzkDhFnhW+DJNb2y6Kc3BpqmuEB+5C/DGFYDlmA==",
+  "dgSpecHash": "nkneW0hdtzYADRquq38mAgzvTqK+7TS049dcUuicheGkEJRNaRK0UwrGw8jc5pXzh/Ocbs+oBgOeSoa6HvS1Fw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aflorentin\\source\\repos\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
+  "projectFilePath": "C:\\Users\\aflorentin\\source\\repos\\Blazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aflorentin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],

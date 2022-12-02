@@ -9,10 +9,10 @@ namespace BlazorExpenseTracker.Data
 {
     public interface ICategoryRepository
     {
-        Task<IEnumerable<Category>> GetAllCategories();
-        Task<Category> GetCategoryDetails(int id);
-        Task<bool>InsertCategory(Category category);
-        Task<bool>UpdateCategory(Category category);
+        Task<IEnumerable<Categories>> GetAllCategories();
+        Task<Categories> GetCategoryDetails(int id);
+        Task<bool>InsertCategory(Categories category);
+        Task<bool>UpdateCategory(Categories category);
         Task<bool>DeleteCategory(int id);
     }
 }

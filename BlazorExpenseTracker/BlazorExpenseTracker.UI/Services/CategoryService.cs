@@ -23,23 +23,23 @@ namespace BlazorExpenseTracker.UI.Services
 
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategories()
+        public async Task<IEnumerable<Categories>> GetAllCategories()
         {
             //Get Method que se corresponde con el Method [HttpGet] de CategoryController sin parámetros
             //La respuesta de la API no es exactamente el modelo que envíamos, sino que es un HTTP Response en formato Json
             var response = await _httpclient.GetStreamAsync($"api/category");
-           IEnumerable<Category>? enumerable = JsonSerializer.Deserialize<IEnumerable<Category>>(response, 
+           IEnumerable<Categories>? enumerable = JsonSerializer.Deserialize<IEnumerable<Categories>>(response, 
                new JsonSerializerOptions() {PropertyNameCaseInsensitive = true });
             return enumerable;
         }
 
-        public async Task<Category> GetCategoryDetails(int id)
+        public async Task<Categories> GetCategoryDetails(int id)
         {
-            return JsonSerializer.Deserialize<Category>(await _httpclient.GetStreamAsync($"api/Category/{id}"),
+            return JsonSerializer.Deserialize<Categories>(await _httpclient.GetStreamAsync($"api/Category/{id}"),
             new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
         }
 
-        public async Task SaveCategory(Category category)
+        public async Task SaveCategory(Categories category)
         {
             //En este método es  la inversa, debemos Serializar el objeto para realizar el POS
             var serializercat = new StringContent(JsonSerializer.Serialize(category), Encoding.UTF8, "application/json");
@@ -53,5 +53,6 @@ namespace BlazorExpenseTracker.UI.Services
             else
                 await _httpclient.PutAsJsonAsync($"api/Category", category);
         }
+
     }
 }

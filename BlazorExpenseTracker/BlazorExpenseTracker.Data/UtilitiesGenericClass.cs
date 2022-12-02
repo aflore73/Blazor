@@ -99,7 +99,13 @@ namespace BlazorExpenseTracker
 
             internal IEnumerable<KeyValuePair<string, object>> AllPairs
             {
-                get { return _ids.Concat(_values); }
+                
+                get 
+                {
+                    IEnumerable<KeyValuePair<string, object>>aux;
+                    aux =_ids.Concat(_values);
+                    return aux; 
+                }
             }
 
             #endregion

@@ -36,7 +36,7 @@ namespace BlazorExpenseTracker.API.Controllers
 
         //[FromBody]: Como es un método POST, le decimos que desde el cuerpo de ese POST obtenga el modelo
         [HttpPost]
-        public async Task<IActionResult> CreateCategory([FromBody] Category category)
+        public async Task<IActionResult> CreateCategory([FromBody] Categories category)
         {
             if (category == null)
             {
@@ -73,7 +73,7 @@ namespace BlazorExpenseTracker.API.Controllers
             del elemento se ha realizado sin problemas.
         */
         [HttpPut]
-        public async Task<IActionResult> UpdateCategory([FromBody] Category category)
+        public async Task<IActionResult> UpdateCategory([FromBody] Categories category)
         {
             if (category == null)
             {

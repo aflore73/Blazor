@@ -21,34 +21,35 @@ namespace BlazorExpenseTracker.Data
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategories()
+        public async Task<IEnumerable<Categories>> GetAllCategories()
         {
             var sql = @"select Id, Name from Categories";
-            return await sqlconfiguration.ReturnClass<Category>(sql);
+            return await sqlconfiguration.ReturnClass<Categories>(sql);
         }
-        public async Task<Category> GetCategoryDetails(int id)
+        public async Task<Categories> GetCategoryDetails(int id)
         {
-            Category category = new Category() { Id = id};
+            Categories category = new Categories() { Id = id};
             var properties = UtilitiesGenericClass.ParseProperties(category);
             var sqlPairs = UtilitiesGenericClass.GetSqlPairs(properties.IdNames, " AND ");
             var sql = string.Format("SELECT * FROM [{0}] WHERE {1}", "categories", sqlPairs);
-            return await sqlconfiguration.GetItem<Category>(sql, properties.AllPairs);
+            return await sqlconfiguration.GetItem<Categories>(sql, properties.AllPairs);
         }
-        public async Task<bool> Update<T>(T obj)
+        public async Task<bool> UpdateCategory(Categories category)
         {
-            var propertyContainer = UtilitiesGenericClass.ParseProperties(obj);
+            var propertyContainer = UtilitiesGenericClass.ParseProperties(category);
             var sqlIdPairs = UtilitiesGenericClass.GetSqlPairs(propertyContainer.IdNames);
             var sqlValuePairs = UtilitiesGenericClass.GetSqlPairs(propertyContainer.ValueNames);
-            var sql = string.Format("UPDATE [{0}] SET {1} WHERE {2}", typeof(T).Name, sqlValuePairs, sqlIdPairs);
-            return await sqlconfiguration.Execute(sql, propertyContainer.ValuePairs);
+            var sql = string.Format("UPDATE [{0}] SET {1} WHERE {2}", "categories", sqlValuePairs, sqlIdPairs);
+            return await sqlconfiguration.Execute(sql, propertyContainer.AllPairs);
         }
 
         public async Task<bool> Delete<T>(T obj)
         {
             var propertyContainer = UtilitiesGenericClass.ParseProperties(obj);
             var sqlIdPairs = UtilitiesGenericClass.GetSqlPairs(propertyContainer.IdNames);
-            var sql = string.Format("DELETE FROM [{0}] WHERE { 1}", typeof(T).Name, sqlIdPairs);
+            var sql = string.Format("DELETE FROM [{0}] WHERE {1}", typeof(T).Name, sqlIdPairs);
             return await sqlconfiguration.Execute(sql, propertyContainer.IdPairs);
+            //db.QueryFirstOrDefaultAsync<Category>(sql, new { Id = id });
         }
         //public async Task<IEnumerable<Category>> GetCategoryDetails(int id)
         //{    
@@ -56,9 +57,9 @@ namespace BlazorExpenseTracker.Data
         //    return await sqlconfiguration.ReturnClass<Category>(sql, id);
         //}
 
-        public async Task<bool>InsertCategory(Category category)
+        public async Task<bool>InsertCategory(Categories category)
         {
-            var propertyContainer = UtilitiesGenericClass.ParseProperties<Category>(category);
+            var propertyContainer = UtilitiesGenericClass.ParseProperties<Categories>(category);
             //
             var sqlIdPairs = UtilitiesGenericClass.GetSqlPairs(propertyContainer.IdNames);
             var sqlValuePairs = UtilitiesGenericClass.GetSqlPairs(propertyContainer.ValueNames);
@@ -71,11 +72,11 @@ namespace BlazorExpenseTracker.Data
             
         }
 
-        public async Task<bool> UpdateCategory(Category category)
-        {
-            var sql = @"Update Categories Set Name = " + category.Name.ToString() + " Where Id = " + category.Id.ToString();
-            return await sqlconfiguration.Execute(sql);
-        }
+        //public async Task<bool> UpdateCategory(Category category)
+        //{
+        //    var sql = @"Update Categories Set Name = " + category.Name.ToString() + " Where Id = " + category.Id.ToString();
+        //    return await sqlconfiguration.Execute(sql);
+        //}
 
     }
 }
