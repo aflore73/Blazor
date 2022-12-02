@@ -1,0 +1,65 @@
+﻿@page "/categories"
+@page "/categories/{id}"
+@using Model
+@using Interfaces
+@inject ICategoryService CategoryService
+
+<h1>Categories</h1>
+
+@if (listcategories == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cat in listcategories)
+            {
+                <tr>
+                    <td>@cat.Id</td>
+                    <td>@cat.Name</td>
+                    <td><a href="/categoriesdetails/@cat.Id"><i>Edit</i></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+        [Parameter]
+        public int id { get; set; }
+
+    public IEnumerable<Category> listcategories { get; set;}
+    public string Message { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            if(id > 0)
+            {
+                var categories = await CategoryService.GetCategoryDetails(id);
+                listcategories.Append(categories);
+            }
+            else
+            {
+                listcategories = await CategoryService.GetAllCategories();
+            }
+        }
+        catch(Exception e)
+        {
+            Message = "Something went wrong..." + e.Message;
+        }
+    }
+    
+//    {
+//        new Category{Id = 1, Name= "Shopping"},
+//        new Category{Id = 2, Name= "fuel"}
+//    };
+//}
+}

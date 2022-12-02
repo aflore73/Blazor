@@ -1,0 +1,26 @@
+﻿@page "/syntax"
+
+<h3>Razor syntax</h3>
+
+@try
+{
+    <lu>
+        @foreach(var item in ls)
+        {
+            <li>Item: @item</li>
+        }
+    </lu>
+    throw new Exception("This is a error");
+}
+catch (Exception e)
+{
+
+        <p>The execption message: @e.Message</p>
+}
+finally
+{
+        <p>This is the filnally.</p>    
+}
+@code {
+        List<string> ls = new List<string>() { "a", "b", "c" };
+}

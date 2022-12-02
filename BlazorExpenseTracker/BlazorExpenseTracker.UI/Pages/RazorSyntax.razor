@@ -1,0 +1,21 @@
+﻿@page "/counter"
+
+<h3>Razor syntax</h3>
+
+@try
+{
+    throw new Exception("This is a error");
+}
+catch (Exception e)
+{
+    
+    <p>The execption message: @e.Message</p>
+}
+finally
+{
+    <p>This is the filnally.</p>    
+}
+
+@code {
+
+}

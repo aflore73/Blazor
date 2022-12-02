@@ -1,0 +1,10 @@
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.deps.json
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.dll
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.pdb
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.csproj.AssemblyReference.cache
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.AssemblyInfoInputs.cache
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.AssemblyInfo.cs
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.csproj.CoreCompileInputs.cache
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.dll
+C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.pdb

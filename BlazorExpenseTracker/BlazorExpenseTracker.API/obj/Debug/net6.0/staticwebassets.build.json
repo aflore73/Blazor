@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "D0V04uM8ErinzXF+kwwgA8XtYyNBb75IRGWVDfk+068=",
+  "Source": "BlazorExpenseTracker.API",
+  "BasePath": "_content/BlazorExpenseTracker.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

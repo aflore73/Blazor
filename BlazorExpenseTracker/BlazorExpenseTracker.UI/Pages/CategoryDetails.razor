@@ -1,0 +1,63 @@
+﻿@page "/categoriesdetails"
+@page "/categoriesdetails/{id:int}"
+@using Model
+@using Interfaces
+@inject ICategoryService CategoryService
+
+<h1>CategoryDetails</h1>
+@*Model bindea al form con el modelo de Datos Category.
+Lo que se cargue en el form se modifica en el Modelo y lo que hay en el modelo se refleja aquí
+*@
+<EditForm Model="@category" OnValidSubmit="SavedCategory">
+    @*DataAnnotationsValidator debe estar para que Blazor sepa que tenemos un decorador del lado del modelo,
+        entonces cuando se presiones submit se accionarán los decoradores.
+    ValidationSummary: Imprime un mensaje que envíe el  Modelo de datos establecido en el decorador [Required]
+    *@
+    <DataAnnotationsValidator/>
+    @*<ValidationSummary/>*@
+    <table class="table-hover">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" @bind="category.Name "/></td>
+        </tr>
+        <tr>
+            @*otra forma de bindear mensajes es con ValidationMessage.
+            La propiedad "For" bindea a la property del modelo con el mensaje*@
+            <td colspan="2"><ValidationMessage For="@(() => category.Name)"></ValidationMessage>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" value="Save" />
+                <input type="button" value="Cancel" />
+            </td>
+        </tr>
+    </table>
+</EditForm>
+@code {
+    [Parameter]
+    public int id{ get; set; }
+    Category category = new Category();
+    public string Message { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            if (id > 0)
+                category = await CategoryService.GetCategoryDetails(id);
+        }
+        catch (Exception e)
+        {
+            Message = "Something went wrong..." + e.Message;
+        }
+    }
+    //Cómo el servicio nos posee métodos async, debemos cambiar el voir por un Task
+    //protected void SavedCategory()
+    protected async Task SavedCategory()
+    {
+        //category se encuenta bindeada con el Form Two Way <->
+        //Model="@category"
+        await CategoryService.SaveCategory(category);
+    }
+}
