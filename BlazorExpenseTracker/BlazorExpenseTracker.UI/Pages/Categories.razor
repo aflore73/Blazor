@@ -4,8 +4,8 @@
 @using Interfaces
 @inject ICategoryService CategoryService
 
-<h1>Categories</h1>
-
+<h3>Categories</h3>
+<p>@Message</p>
 @if (listcategories == null)
 {
     <p><em>Loading...</em></p>
@@ -33,6 +33,7 @@ else
                     <td>@cat.Id</td>
                     <td>@cat.Name</td>
                     <td><a href="/categoriesdetails/@cat.Id"><i>Edit</i></a></td>
+                    <td><a href="/categorydelete/@cat.Id"><i>Delete</i></a></td>
                 </tr>
             }
         </tbody>
@@ -42,21 +43,13 @@ else
         [Parameter]
         public int id { get; set; }
 
-    public IEnumerable<Model.Categories> listcategories { get; set;}
-    public string Message { get; set; }
+    public IEnumerable<Model.Categories>? listcategories { get; set;}
+    public string? Message { get; set; }
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            if(id > 0)
-            {
-                var categories = await CategoryService.GetCategoryDetails(id);
-                listcategories.Append(categories);
-            }
-            else
-            {
-                listcategories = await CategoryService.GetAllCategories();
-            }
+        	listcategories = await CategoryService.GetAllCategories();
         }
         catch(Exception e)
         {

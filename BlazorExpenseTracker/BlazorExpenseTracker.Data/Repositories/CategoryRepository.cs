@@ -16,9 +16,13 @@ namespace BlazorExpenseTracker.Data
             sqlconfiguration = _sqlconfiguration;
         }
         
-        public Task<bool> DeleteCategory(int id)
+        public async Task<bool> DeleteCategory(int id)
         {
-            throw new NotImplementedException();
+            Categories category = new Categories() { Id = id };
+            var propertyContainer = UtilitiesGenericClass.ParseProperties(category);
+            var sqlIdPairs = UtilitiesGenericClass.GetSqlPairs(propertyContainer.IdNames);
+            var sql = string.Format("DELETE FROM [{0}] WHERE {1}", "categories", sqlIdPairs);
+            return await sqlconfiguration.Execute(sql, propertyContainer.IdPairs);
         }
 
         public async Task<IEnumerable<Categories>> GetAllCategories()
