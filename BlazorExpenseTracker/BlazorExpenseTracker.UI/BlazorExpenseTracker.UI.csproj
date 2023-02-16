@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,8 @@
 
   <ItemGroup>
     <None Include="Pages\RazorSyntax.razor" />
+    <None Include="wwwroot\images\minus_green.png" />
+    <None Include="wwwroot\images\plus_green.png" />
   </ItemGroup>
 
 </Project>

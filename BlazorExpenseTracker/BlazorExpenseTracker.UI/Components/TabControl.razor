@@ -1,0 +1,69 @@
+﻿<div class="btn-group" role="group">
+    @foreach(TabPage item in Pages)
+    {
+        <button type="button"
+            class="btn @GetButtonClass(item)" @onclick=@(() => ActivatePage(item))>
+            @if (TabTitle != null)
+            {
+                @TabTitle(item)
+            }
+            else
+            {
+                @item.Caption
+            }
+        </button>
+        
+    }
+</div>
+@*propiedad que sirve para enviar estados del padre a sus hijos*@
+<CascadingValue Value="this">
+    @ChildContent
+</CascadingValue>
+@code {
+    [Parameter]
+    //parámetro donde recibe cada TabPage que se agregue al control. Lo que se coloque entre <TabControl>...</TabControl>
+    public RenderFragment ChildContent{ get; set; }
+
+    //parámetro (tipado) donde recibe un TabPage
+    [Parameter]
+    public RenderFragment<TabPage>TabTitle{ get; set; }
+
+    public TabPage ActivePage{ get; set; }
+
+    List<TabPage> Pages = new List<TabPage>();
+    internal void AddPage(TabPage tabpage)
+    {
+        Pages.Add(tabpage);
+        if (Pages.Count == 1)
+            //Si la única TabPage es la recién agregada-> será la activa
+            ActivePage = tabpage;
+        //fuerzo a que se renderize el componente
+        //StateHasChanged();
+    }
+
+    /// <summary>
+    /// Ddvuelve el nombre de una clase bootstrap para simular un tab activo
+    /// </summary>
+    /// <param name="page">TabPage</param>
+    /// <returns>clase bootstrap Button</returns>
+    protected string GetButtonClass(TabPage page)
+    {
+        return ActivePage == page ? "btn-primary" : "btn-secundary";
+    }
+    /// <summary>
+    /// Activa la TabPage seleccionada 
+    /// </summary>
+    /// <param name="page">TabPage seleccionada</param>
+    protected void ActivatePage(TabPage page)
+    {
+        ActivePage = page;
+    }
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            StateHasChanged();
+
+    return base.OnAfterRenderAsync(firstRender);
+
+    }
+}

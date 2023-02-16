@@ -8,3 +8,13 @@ C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model
 C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.csproj.CoreCompileInputs.cache
 C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.dll
 C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.pdb
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.deps.json
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.dll
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.pdb
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.csproj.AssemblyReference.cache
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.AssemblyInfoInputs.cache
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.AssemblyInfo.cs
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.csproj.CoreCompileInputs.cache
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.dll
+C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Model\obj\Debug\netstandard2.1\BlazorExpenseTracker.Model.pdb

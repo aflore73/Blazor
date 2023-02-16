@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "W1FNUgjRyuNE9356IeK3hGOANCN/Lfnyyubo3dh8eiUki7qWg5VzaGELFjaKfGZXDlFC5KOOhGRQtTwfXRbs6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\af\\source\\repos\\CursosBlazor\\BlazorExpenseTracker\\BlazorExpenseTracker.Model\\BlazorExpenseTracker.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\af\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\af\\.nuget\\packages\\netstandard.library.ref\\2.1.0\\netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

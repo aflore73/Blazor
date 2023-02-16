@@ -1,0 +1,24 @@
+﻿@page "/expensetracker"
+@using BlazorExpenseTracker.UI.Components
+
+<h3>ExpenseTracker</h3>
+@*Agrego el componente padre TabControl que contendrá cuantos TabPage hijos se quiera*@
+<TabControl>
+    <TabTitle>
+        <img src="images/@(context.ImageSource).png" /> @context.Caption
+    </TabTitle>
+    @*Lo que sigue debajo lo recibe la peopiedad ChildContent de TabControl, 
+    por medio del decorador RenderFragment*@
+    @*Como existen en TabControl dos propiedades RenderFragment(TabTitle y ChildContent), es necesario explicitarlo*@
+    <ChildContent>
+        <TabPage Caption="Expense" ImageSource="minus_green">
+            <h3>Expense tabpage</h3>
+        </TabPage>
+        <TabPage Caption="Income" ImageSource="plus_green">
+            <h3>Income tabpage</h3>
+        </TabPage>
+    </ChildContent>
+</TabControl>
+@code {
+
+}
