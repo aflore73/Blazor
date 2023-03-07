@@ -11,16 +11,3 @@ C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Data\
 C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.csproj.CopyComplete
 C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.dll
 C:\Users\aflorentin\source\repos\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.pdb
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\bin\Debug\netstandard2.1\BlazorExpenseTracker.Data.deps.json
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\bin\Debug\netstandard2.1\BlazorExpenseTracker.Data.dll
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\bin\Debug\netstandard2.1\BlazorExpenseTracker.Data.pdb
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.dll
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\bin\Debug\netstandard2.1\BlazorExpenseTracker.Model.pdb
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.csproj.AssemblyReference.cache
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.AssemblyInfoInputs.cache
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.AssemblyInfo.cs
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.csproj.CoreCompileInputs.cache
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.csproj.CopyComplete
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.dll
-C:\Users\af\source\repos\CursosBlazor\BlazorExpenseTracker\BlazorExpenseTracker.Data\obj\Debug\netstandard2.1\BlazorExpenseTracker.Data.pdb

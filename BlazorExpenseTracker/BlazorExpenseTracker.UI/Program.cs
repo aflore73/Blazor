@@ -20,6 +20,8 @@ namespace BlazorExpenseTracker.UI
             //Uri HTTPS: Port->44345
             builder.Services.AddHttpClient<ICategoryService, CategoryService>(
                 client => { client.BaseAddress = new Uri("https://localhost:44345"); });
+            builder.Services.AddHttpClient<IExpenseService, ExpenseService>(
+               client => { client.BaseAddress = new Uri("https://localhost:44345"); });
 
             var app = builder.Build();
 

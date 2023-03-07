@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Xml.Xsl;
+using System.Linq.Expressions;
+using System.Data.Common;
 
 namespace BlazorExpenseTracker.Data
 {
@@ -18,7 +21,8 @@ namespace BlazorExpenseTracker.Data
         {
             _sqlproperties = properties;
         }
-        protected SqlConnection dbConnection()
+        public string SqlConnectionString { get => _sqlproperties.SqlConnectionString; }
+        public SqlConnection dbConnection()
         {
             return new SqlConnection(_sqlproperties.SqlConnectionString);
         }
@@ -70,7 +74,20 @@ namespace BlazorExpenseTracker.Data
                 clsreturn = sqlconnection.QueryAsync<T>(querycommand);
             return await clsreturn;
         }
+        Task<IEnumerable<TReturn>> ISqlConfiguration.ReturnMultiClass<TFirst, TSecond, TReturn>(string querycommand, Func<TFirst, TSecond, TReturn> args)
+        {
+            var sqlconnection = dbConnection();
+            
+            return sqlconnection.QueryAsync(querycommand, args);
+            
+        }
 
+        public async Task<DbDataReader> ReturnObjectList(string querycommand)
+        {
+            var sqlconnection = dbConnection();
+
+            return await sqlconnection.ExecuteReaderAsync(querycommand);
+        }
 
     }
 }

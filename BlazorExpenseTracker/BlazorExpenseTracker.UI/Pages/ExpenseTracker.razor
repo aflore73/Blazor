@@ -1,24 +1,97 @@
 ﻿@page "/expensetracker"
 @using BlazorExpenseTracker.UI.Components
+@using Model
+@implements IDisposable
 
 <h3>ExpenseTracker</h3>
-@*Agrego el componente padre TabControl que contendrá cuantos TabPage hijos se quiera*@
-<TabControl>
-    <TabTitle>
-        <img src="images/@(context.ImageSource).png" /> @context.Caption
-    </TabTitle>
-    @*Lo que sigue debajo lo recibe la peopiedad ChildContent de TabControl, 
-    por medio del decorador RenderFragment*@
-    @*Como existen en TabControl dos propiedades RenderFragment(TabTitle y ChildContent), es necesario explicitarlo*@
-    <ChildContent>
-        <TabPage Caption="Expense" ImageSource="minus_green">
-            <h3>Expense tabpage</h3>
-        </TabPage>
-        <TabPage Caption="Income" ImageSource="plus_green">
-            <h3>Income tabpage</h3>
-        </TabPage>
-    </ChildContent>
-</TabControl>
+@*pureba----->
+
+<p>
+    <input @bind="inputValue" />
+</p>
+
+<p>
+    <code>Format Value</code>: @inputValue
+</p>
+pureba-----<*@
+
+<CascadingValue Value="expense">
+    @if (expense.Id == 0)
+    {
+        @*Agrego el componente padre TabControl que contendrá cuantos TabPage hijos se quiera*@
+        <TabControl>
+            <TabTitle>
+                <img src="images/@context.ImageSource" /> @context.Caption
+            </TabTitle>
+            @*Lo que sigue debajo lo recibe la peopiedad ChildContent de TabControl, 
+            por medio del decorador RenderFragment*@
+            @*Como existen en TabControl dos propiedades RenderFragment(TabTitle y ChildContent), es necesario explicitarlo
+            Lo que se encuentra entre los <h3> del TabPage será recibido por el Paarámetro ChildContent del TabPage.
+            *@
+            <ChildContent>
+                @foreach (ExpenseType type in (ExpenseType[])Enum.GetValues(typeof(ExpenseType)))
+                {
+                    <TabPage Caption=@Enum.GetName(typeof(ExpenseType),type) ImageSource=@TypeOfExpense.SourceIcon(type)>
+                        <ExpenseDetails expensetype=type></ExpenseDetails>
+                    </TabPage>
+                    @* <TabPage Caption="Income" ImageSource="plus_green.png">
+                    <ExpenseDetails expensetype=Model.ExpenseType.Income></ExpenseDetails>
+                </TabPage>*@
+                }
+            </ChildContent>
+        </TabControl>
+    }
+    else
+    {
+        <TabControl>
+            <TabTitle>
+                <img src="@("images/" + TypeOfExpense.SourceIcon(expense.ExpenseType))" /> @Enum.GetName(typeof(ExpenseType),expense.ExpenseType)
+            </TabTitle>
+            @*Lo que sigue debajo lo recibe la peopiedad ChildContent de TabControl, 
+            por medio del decorador RenderFragment*@
+            @*Como existen en TabControl dos propiedades RenderFragment(TabTitle y ChildContent), es necesario explicitarlo
+            Lo que se encuentra entre los <h3> del TabPage será recibido por el Paarámetro ChildContent del TabPage.
+            *@
+            <ChildContent>
+                <TabPage Caption=@Enum.GetName(typeof(ExpenseType),expense.ExpenseType) ImageSource="@("images/" + TypeOfExpense.SourceIcon(expense.ExpenseType))">
+                    <ExpenseDetails expensetype=expense.ExpenseType></ExpenseDetails>
+                </TabPage>
+                @* <TabPage Caption="Income" ImageSource="plus_green.png">
+                <ExpenseDetails expensetype=Model.ExpenseType.Income></ExpenseDetails>
+            </TabPage>*@
+            </ChildContent>
+        </TabControl>
+    }
+    <ExpenseHistory></ExpenseHistory>
+</CascadingValue>
 @code {
+    @*pureba----->*@
+    private int inputValue = 123;
+
+    private bool IsReady { get; set; }
+
+    private Expense expense;
+
+    protected override Task OnInitializedAsync()
+    {
+        expense = new Expense();
+        //cuando Expense informa cambios, se dispara el evento StateHasChange de este componente que provoca que se renderize
+        //Tomando el FormEdit los nuevos valores del Model (expense)
+        expense.OnSelectedExpenseChanged += StateHasChanged;
+
+        return base.OnInitializedAsync();
+    }
+
+
+    //{
+    //    IsReady = true;
+    //    base.OnInitialized();
+
+    //}
+
+    public void Dispose()
+    {
+        expense.OnSelectedExpenseChanged -= StateHasChanged;
+    }
 
 }

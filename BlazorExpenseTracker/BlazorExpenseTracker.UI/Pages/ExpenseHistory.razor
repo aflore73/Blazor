@@ -1,0 +1,69 @@
+﻿@using Interfaces
+@using Model
+@inject IExpenseService ExpenseService
+
+<h1>ExpenseHistory</h1>
+<p>@Message</p>
+@if (expenses == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-bordered table-light table-hover">
+        <thead>
+            <tr>
+                <td>Amount</td>
+                <td>Category</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in expenses)
+            {
+                <tr @onclick="@(() => SelectedChanged(item.Id))">
+                    <td style="@GetTextColor(item.Id)">@item.Amount</td>
+                    <td>@item.Category.Name</td>
+                    <td>@item.TransactionDate.ToString("dd-MM-yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    [CascadingParameter] protected Expense SelectedExpense{ get; set; }
+
+    protected IEnumerable<Expense> expenses{ get; set; }
+    private string? Message{ get; set; }
+
+    protected async Task SelectedChanged(int IdExpense)
+    {
+        var ex = await ExpenseService.GetExpenseDetails(IdExpense);
+        SelectedExpense.SelectedExpenseChanged(ex);
+    }
+    //Cambio OnInitialize por OnParametersSet, ya que ahora recibe mensajes desde CascadingParameter
+    //protected override async Task OnInitializedAsync()
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            expenses = (await ExpenseService.GetExpenses());
+        }
+        catch(Exception ex)
+        {
+            Message = "Something went wrong.." + ex.Message;
+        }
+    }
+
+    //Método para cambiar el color del campo Amount si es Income(verde), sino rojo
+    protected string GetTextColor(int id)
+    {
+        //obtengo la clase completa por el Expense.Id
+        var exp = expenses.FirstOrDefault(e => e.Id == id);
+        //Sí el typo de la clase devuelta en exp es Income(entrada) devolver color verde, sino rojo
+        return exp.ExpenseType == ExpenseType.Income ? "color:green" : "color:red";
+    }
+
+}

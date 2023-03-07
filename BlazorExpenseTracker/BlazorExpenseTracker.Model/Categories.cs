@@ -13,5 +13,9 @@ namespace BlazorExpenseTracker.Model
         [Required(AllowEmptyStrings = false, ErrorMessage = "Category Name is required.")]
         public string? Name { get; set; }
 
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

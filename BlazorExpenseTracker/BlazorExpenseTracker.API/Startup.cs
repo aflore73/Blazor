@@ -27,14 +27,15 @@ namespace BlazorExpenseTracker.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             //Ceo solo una sola vez la clase SqlProperties que posee la Property del ConnectionString
+            services.AddScoped<ISqlConfiguration, SqlConfiguration>();
             var sqlporperties = new SqlProperties(Configuration.GetConnectionString("SqlConnection"));
             services.AddSingleton(sqlporperties);
             //var category = new CategoryRepository(sqlconfig);
-            services.AddScoped<ISqlConfiguration, SqlConfiguration>();  
             services.AddScoped<ICategoryRepository, CategoryRepository>();
-            
+            services.AddScoped<IExpenseRepository, ExpenseRepository>();
+            services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +52,7 @@ namespace BlazorExpenseTracker.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
