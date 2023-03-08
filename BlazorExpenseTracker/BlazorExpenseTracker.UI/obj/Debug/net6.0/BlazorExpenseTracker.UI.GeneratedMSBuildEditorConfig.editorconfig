@@ -40,6 +40,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/af/source/repos/CursosBlazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/ExpenseDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZW5zZURldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/af/source/repos/CursosBlazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/ExpenseHistory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZW5zZUhpc3RvcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/af/source/repos/CursosBlazor/BlazorExpenseTracker/BlazorExpenseTracker.UI/Pages/ExpenseTracker.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZW5zZVRyYWNrZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

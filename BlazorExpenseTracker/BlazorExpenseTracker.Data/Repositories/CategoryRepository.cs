@@ -11,6 +11,11 @@ namespace BlazorExpenseTracker.Data
     public class CategoryRepository : ICategoryRepository
     {
         private ISqlConfiguration sqlconfiguration { get; set; }
+        /*
+         * En Startup se declara:
+         * services.AddScoped<ISqlConfiguration, SqlConfiguration>();  
+         * de esta forma se vincula en los constructores de las clases por ejemplo
+         * */
         public CategoryRepository(ISqlConfiguration _sqlconfiguration)
         {
             sqlconfiguration = _sqlconfiguration;

@@ -1,0 +1,128 @@
+﻿@using Interfaces
+@using Model
+@inject ICategoryService CategoryService
+@inject IExpenseService ExpenseService
+@inject NavigationManager NavigationManager
+
+@*Lod Bind asignan el "value" del input a las propiedades de la clase Expense para almacenarlos luego*@
+<EditForm Model="@expense" OnValidSubmit="SaveExpense">
+    @*El decorator <DataAnnotationsValidator> es necesario para que los tags <ValidationMessage> funcionen*@
+    <DataAnnotationsValidator/>
+    <table class="table-hover">
+        <tr>
+            <td>Amount:</td>
+            <td><InputNumber @bind-Value=@expense.Amount></InputNumber>
+                <ValidationMessage For ="@(() => expense.Amount)"></ValidationMessage>
+            </td>
+        </tr>
+        <tr>
+            <td>Transaction Date:</td>
+            <td><InputDate @bind-Value=@expense.TransactionDate></InputDate>
+                <ValidationMessage For="@(() => expense.TransactionDate)"></ValidationMessage>
+            </td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td><InputSelect @bind-Value="@expense.CategoryId">
+                    @foreach(Model.Categories category in categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td>Expese Type:</td>
+            <td>
+                <InputSelect disabled=true @bind-Value=@expense.ExpenseType>
+                    <option value=@ExpenseType.Income>@((ExpenseType)ExpenseType.Income)</option>
+                    <option value=@ExpenseType.Expense>@((ExpenseType)ExpenseType.Expense)</option>
+                </InputSelect>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+            <input type="submit" class="btn-success" value = "@(expense.Id == 0 ? "Save" : "Update")" />
+            <input type="button" class="btn-secondary" value="Cancel" @onclick="Cancel" style="@GetButtonStyle()"/>
+                <input type="button" class="btn-outline-danger" value="Delete" @onclick="Delete" style="@GetButtonStyle()" />
+            </td>
+        </tr>
+    </table>
+</EditForm>
+
+@code {
+    [Parameter]
+    public ExpenseType expensetype { get; set; }
+    //Ahora voy a recibir la clase Expese desde [CascadingParameter] protected Expense
+    //private Expense expense = new Expense();
+    [CascadingParameter] protected Expense expense { get; set; }
+    private IEnumerable<Model.Categories> categories = new List<Model.Categories>();
+    private string Message = "";
+    private int category_Id{ get; set; }
+    private bool isready{ get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            categories = await CategoryService.GetAllCategories();
+        }
+        catch (Exception e)
+        {
+            Message = "Something went wrong..." + e.Message;
+        }
+        //Si un item nuevo el Id es cero, sino la clase la completará el [CascadingParameter]
+        if (expense.Id == 0)
+        {
+            category_Id = categories.FirstOrDefault().Id;
+            expense.CategoryId = category_Id.ToString();
+            expense.ExpenseType = expensetype;
+        }
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        isready = firstRender;
+    }
+
+    private void Cancel()
+    {
+        //Inicializar la clase expense
+        expense.Id = 0;
+        expense.Amount = 0;
+        expense.TransactionDate = DateTime.MinValue ;
+        expense.CategoryId = category_Id.ToString();
+        expense.ExpenseType = expensetype;
+        //NavigationManager.NavigateTo("/expense");
+    }
+
+    protected async Task Delete()
+    {
+        try
+        {
+            await ExpenseService.DeleteExpense(expense.Id);
+            //notificamos a la clase que algo cambió
+            expense.SelectedExpenseChanged(expense);
+        }
+        catch(Exception ex)
+        {
+            Message = "Something went wrong..." + ex.Message;
+        }
+    }
+
+    protected string GetButtonStyle()
+    {
+        return expense.Id == 0 ? "display:none" : "";
+    }
+
+    protected async Task SaveExpense()
+    {
+        Model.Categories cat = new Model.Categories();
+        cat.Id = int.Parse(expense.CategoryId);
+        expense.Category = (Model.Categories)categories.FirstOrDefault(cat);
+        await ExpenseService.SaveExpense(expense);
+        //notificamos a la clase que algo cambió
+        expense.SelectedExpenseChanged(expense);
+    }
+
+}

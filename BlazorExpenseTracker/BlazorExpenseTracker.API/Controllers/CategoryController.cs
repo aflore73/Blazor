@@ -7,8 +7,8 @@ namespace BlazorExpenseTracker.API.Controllers
 {
     //MVC es inteligente para luego reemplazar [controller] por la clase correspondiente
     //El tipo de controller será ApiController
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CategoryController : Controller
     {
         //declaramos una Interface del modelo Datos
