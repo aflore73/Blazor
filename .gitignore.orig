@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+*.vsidx
+*.cache
+=======
+*.cache
+*.vsidx
+>>>>>>> a232ca9fdc2600b5fa3cc738022703c5c1ec3bcb

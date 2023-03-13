@@ -3,6 +3,7 @@
 @inject ICategoryService CategoryService
 @inject IExpenseService ExpenseService
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
 
 @*Lod Bind asignan el "value" del input a las propiedades de la clase Expense para almacenarlos luego*@
 <EditForm Model="@expense" OnValidSubmit="SaveExpense">
@@ -98,15 +99,19 @@
 
     protected async Task Delete()
     {
-        try
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Are you sure?");
+        if (confirmed)
         {
-            await ExpenseService.DeleteExpense(expense.Id);
-            //notificamos a la clase que algo cambió
-            expense.SelectedExpenseChanged(expense);
-        }
-        catch(Exception ex)
-        {
-            Message = "Something went wrong..." + ex.Message;
+            try
+            {
+                await ExpenseService.DeleteExpense(expense.Id);
+                //notificamos a la clase que algo cambió
+                expense.SelectedExpenseChanged(expense);
+            }
+            catch (Exception ex)
+            {
+                Message = "Something went wrong..." + ex.Message;
+            }
         }
     }
 
