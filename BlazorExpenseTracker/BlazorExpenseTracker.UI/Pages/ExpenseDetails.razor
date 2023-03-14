@@ -12,19 +12,19 @@
     <table class="table-hover">
         <tr>
             <td>Amount:</td>
-            <td><InputNumber @bind-Value=@expense.Amount></InputNumber>
+            <td><InputNumber class="form-control col-sm-3" @bind-Value=@expense.Amount></InputNumber>
                 <ValidationMessage For ="@(() => expense.Amount)"></ValidationMessage>
             </td>
         </tr>
         <tr>
             <td>Transaction Date:</td>
-            <td><InputDate @bind-Value=@expense.TransactionDate></InputDate>
+            <td><InputDate class="form-control col-sm-3" @bind-Value=@expense.TransactionDate></InputDate>
                 <ValidationMessage For="@(() => expense.TransactionDate)"></ValidationMessage>
             </td>
         </tr>
         <tr>
             <td>Category:</td>
-            <td><InputSelect @bind-Value="@expense.CategoryId">
+            <td><InputSelect class="form-control col-sm-3" @bind-Value="@expense.CategoryId">
                     @foreach(Model.Categories category in categories)
                     {
                         <option value="@category.Id">@category.Name</option>
@@ -35,17 +35,17 @@
         <tr>
             <td>Expese Type:</td>
             <td>
-                <InputSelect disabled=true @bind-Value=@expense.ExpenseType>
+                <InputSelect class="form-control col-sm-3" disabled=true @bind-Value=@expense.ExpenseType>
                     <option value=@ExpenseType.Income>@((ExpenseType)ExpenseType.Income)</option>
                     <option value=@ExpenseType.Expense>@((ExpenseType)ExpenseType.Expense)</option>
                 </InputSelect>
             </td>
         </tr>
         <tr>
-            <td colspan="2" style="text-align:center">
-            <input type="submit" class="btn-success" value = "@(expense.Id == 0 ? "Save" : "Update")" />
-            <input type="button" class="btn-secondary" value="Cancel" @onclick="Cancel" style="@GetButtonStyle()"/>
-                <input type="button" class="btn-outline-danger" value="Delete" @onclick="Delete" style="@GetButtonStyle()" />
+            <td colspan="5" style="align-items:center;text-align:center">
+            <input type="submit" class="btn btn-success" value = "@(expense.Id == 0 ? "Save" : "Update")" />
+            <input type="button" class="btn btn-secondary" value="Cancel" @onclick="Cancel" style="@GetButtonStyle()"/>
+                <input type="button" class="btn btn-outline-danger" value="Delete" @onclick="Delete" style="@GetButtonStyle()" />
             </td>
         </tr>
     </table>

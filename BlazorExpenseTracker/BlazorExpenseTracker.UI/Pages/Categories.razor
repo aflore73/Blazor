@@ -4,7 +4,17 @@
 @using Interfaces
 @inject ICategoryService CategoryService
 
-<h3>Categories</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h3>Categories</h3>
+                <a href="/categoriesdetails">Add New</a>
+            </th>
+        </tr>
+    </thead>
+</table>
+
 <p>@Message</p>
 @if (listcategories == null)
 {
@@ -12,26 +22,21 @@
 }
 else
 {
-    <table class="table"> 
-        <tbody>
-            <tr>
-                <td colspan="2"><a href="/categoriesdetails">Add New</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var cat in listcategories)
             {
                 <tr>
-                    <td>@cat.Id</td>
-                    <td>@cat.Name</td>
+                    <td style="text-align:right">@cat.Id</td>
+                    <td style="text-align:left">@cat.Name</td>
                     <td><a href="/categoriesdetails/@cat.Id"><i>Edit</i></a></td>
                     <td><a href="/categorydelete/@cat.Id"><i>Delete</i></a></td>
                 </tr>
